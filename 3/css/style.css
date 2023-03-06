@@ -18,7 +18,7 @@ body {
 .form {
    max-width: 350px;
    margin: 50px auto 0;
-   padding: 20px;
+   padding: 10px;
    background: #fffdee;
    border: 10px solid transparent;
    border-image: 10 repeating-linear-gradient(135deg, #C42061, #C42061 10px, transparent 10px, transparent 20px, #FBCFDF 20px, #FBCFDF 30px, transparent 30px, transparent 40px);
@@ -33,7 +33,7 @@ body {
     padding:10px;
   margin:10px 0;
    .rounded-input {
-  padding:20px;
+ 
   border-radius:20px;
 }
    line-height: 35px;
