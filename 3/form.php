@@ -7,7 +7,7 @@
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
   <select name="year">
-	    <label for="name">Ваш год рождения</label><input type="text" id="name" required>
+	   
     <?php 
     for ($i = 1922; $i <= 2022; $i++) {
       printf('<option value="%d">%d год</option>', $i, $i);
