@@ -1,8 +1,7 @@
 <form action="" method="POST">
   <fieldset>
   <div class="form-row">
-  <label for="name">Ваше имя</label><input type="text" id="name" required>
-</div>
+  <label for="name">Ваше имя</label>
   <div class="form-row">
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
