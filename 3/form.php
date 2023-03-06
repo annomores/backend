@@ -6,6 +6,7 @@
   <div class="form-row">
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
+ <label for="name">Ваш год рождения</label><input type="text" id="year" required>	 
   <select name="year">
 	   
     <?php 
