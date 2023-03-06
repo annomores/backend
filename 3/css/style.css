@@ -16,8 +16,8 @@ body {
    background: #F5E9D9;
 }
 .form {
-   max-width: 350px;
-   margin: 50px auto 0;
+   max-width: 250px;
+   margin: 0 auto ;
    padding: 10px;
    background: #fffdee;
    border: 10px solid transparent;
@@ -31,17 +31,16 @@ body {
 .form-row input[type="name"], .form-row input[type="email"], .form-row input[type="text"], .form-row textarea {
    width: 100%;
     padding:10px;
-  margin:10px 0;
-   .rounded-input {
- 
-  border-radius:20px;
-}
+  margin:5px 0;
    line-height: 35px;
    border-width: 0;
    outline: none;
    background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
    background-size: 8px 35px;
    font-family: 'Playfair Display';
+}
+   .rounded-input {
+  border-radius:20px;
 }
 .form-row textarea {
    background-attachment: local;
