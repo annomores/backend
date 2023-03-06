@@ -8,7 +8,7 @@
 <form action="" method="POST">
   <fieldset>
   <div class="form-row">
-  <label for="name">Ваше имя</label>
+  <label for="name">Ваше имя</label><input type="name" id="name" required>
   <div class="form-row">
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
