@@ -5,10 +5,7 @@
 		<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
-	<div class="form-wrap">
-  <div class="profile"><img src="https://html5book.ru/wp-content/uploads/2016/10/profile-image.png">
-    <h1>Регистрация</h1>
-  </div>
+	
 <form action="" method="POST">
   <fieldset>
   <div class="form-row">
@@ -16,7 +13,7 @@
   <div class="form-row">
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
- <label for="name">Ваш год рождения</label><input type="text" id="year" required>	 
+	  <label for="name">Ваш год рождения</label>	 
   <select name="year">
 	   
     <?php 
