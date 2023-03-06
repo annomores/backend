@@ -9,7 +9,18 @@ body {
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
 }
-
+.form-wrap {
+  width: 550px;
+  background: #ffd500;
+  border-radius: 20px;
+}
+.form-wrap *{transition: .1s linear}
+.profile {
+  width: 240px;
+  float: left;
+  text-align: center;
+  padding: 30px;
+}
 form {
   background: white;
   float: left;
@@ -18,7 +29,11 @@ form {
   border-radius: 0 20px 20px 0;
   color: #7b7b7b; 
 }
-
+.form-wrap:after, form div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 form div {
   margin-bottom: 15px;
   position: relative;
@@ -137,4 +152,3 @@ button {
   h1 {margin-top: auto; padding-bottom: 50px;}
   form {border-radius: 0 0 20px 20px}
 }
-   
