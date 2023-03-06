@@ -1,81 +1,140 @@
-.form {
-	-webkit-box-ordinal-group: 2;
-	    -ms-flex-order: 1;
-	        order: 1;
+*{box-sizing:border-box}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i&subset=cyrillic';
+body {
+  margin: 0;
+  background: #F7F7F7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.form legend {
-	margin: 0 5px;
-	padding: 0 5px;
-	
+form {
+  background: white;
+  float: left;
+  width: calc(100% - 240px);
+  padding: 30px;
+  border-radius: 0 20px 20px 0;
+  color: #7b7b7b; 
 }
-{
-   box-sizing: border-box;
+
+form div {
+  margin-bottom: 15px;
+  position: relative;
 }
-body {
-   background: #F5E9D9;
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  margin-top: 50px;
 }
-.form {
-   max-width: 250px;
-   margin: 0 auto ;
-   padding: 10px;
-   background: #fffdee;
-   border: 10px solid transparent;
-   border-image: 10 repeating-linear-gradient(135deg, #C42061, #C42061 10px, transparent 10px, transparent 20px, #FBCFDF 20px, #FBCFDF 30px, transparent 30px, transparent 40px);
-   font-family: 'Playfair Display';
-   color: #605756;
+h1:after {
+  content: "\f138";
+  font-size: 40px;
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.form-row {
-   margin-bottom: 15px;
+label, span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
-.form-row input[type="name"], .form-row input[type="email"], .form-row input[type="text"], .form-row textarea {
-   width: 100%;
-    padding:10px;
-  margin:5px 0;
-   line-height: 35px;
-   border-width: 0;
-   outline: none;
-   background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
-   background-size: 8px 35px;
-   font-family: 'Playfair Display';
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 10px 15px;
+  border-width: 0;
+  background: #e6e6e6;
+  outline: none;
+  margin: 0;
 }
-   .rounded-input {
-  border-radius:20px;
+input[type="text"]:focus, input[type="email"]:focus {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
 }
-.form-row textarea {
-   background-attachment: local;
-   background-repeat: repeat;
-   resize: none;
+.radio label {
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  line-height: 40px;
+}
+.radio input {
+  position: absolute;
+  opacity: 0;
+}
+.radio-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: #e6e6e6;
+  border-radius: 50%;
+  text-align: center;
+}
+.male:before {
+  content: "\f222";
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+.female:before {
+  content: "\f221";
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+.radio label:hover input ~ .radio-control,
+.radiol input:focus ~ .radio-control {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio input:checked ~ .radio-control {
+  color: red;
 }
 select {
   width: 100%;
-  padding:10px;
-  border-radius:10px;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  background: #e6e6e6;
+  color: #7b7b7b;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
-.form-row input[type="submit"] {
-   padding: 10px 20px;
-   margin-top: 10px;
-   background: #F67CA5;
-   border-width: 0;
-   cursor: pointer;
-   outline: none;
-   font-family: 'Playfair Display';
-   font-size: 13px;
-   letter-spacing: 1px;
-   color: #fffdee;
-   text-transform: uppercase;
-   transition: 1s cubic-bezier(.165, .84, .44, 1);
+select::-ms-expand {
+  display: none;
 }
-.form-row input[type=submit]:hover {
-   background: #C42061;
+.select-arrow {
+  position: absolute;
+  top: 38px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
 }
-@media screen and (min-width: 1024px) {
-   .form {
-		-webkit-box-ordinal-group: 3;
-		    -ms-flex-order: 2;
-		        order: 2;
-   }
+button {
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 120px;
+  margin: 25px auto 0;
+  background: #60e6c5;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  text-transform: uppercase;
 }
-
-
+@media (max-width: 600px) {
+  body {display: block}
+  .form-wrap {margin: 20px auto; max-width: 550px; width:100%}
+  .profile, form {float: none; width: 100%}
+  h1 {margin-top: auto; padding-bottom: 50px;}
+  form {border-radius: 0 0 20px 20px}
+}
    
