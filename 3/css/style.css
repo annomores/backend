@@ -17,7 +17,7 @@ body {
 .form-row {
    margin-bottom: 15px;
 }
-.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
+.form-row input[type="text"], .form-row input[type="text"], .form-row textarea {
    width: 100%;
     padding:10px;
   margin:10px 0;
