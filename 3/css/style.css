@@ -1,10 +1,21 @@
+.form {
+	-webkit-box-ordinal-group: 2;
+	    -ms-flex-order: 1;
+	        order: 1;
+}
+
+.form legend {
+	margin: 0 5px;
+	padding: 0 5px;
+	
+}
 {
    box-sizing: border-box;
 }
 body {
    background: #F5E9D9;
 }
-.POST {
+.form {
    max-width: 350px;
    margin: 50px auto 0;
    padding: 20px;
@@ -59,3 +70,13 @@ select {
 .form-row input[type=submit]:hover {
    background: #C42061;
 }
+@media screen and (min-width: 1024px) {
+   .form {
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
+   }
+}
+
+
+   
