@@ -42,14 +42,14 @@ if ($errors) {
 
 // Сохранение в базу данных.
 
-$user = 'db';
-$pass = '123';
-$db = new PDO('mysql:host=localhost;dbname=test', $user, $pass, [PDO::ATTR_PERSISTENT => true]);
+$user = 'u52822';
+$pass = '8321484';
+$db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, [PDO::ATTR_PERSISTENT => true]);
 
 // Подготовленный запрос. Не именованные метки.
 try {
   $stmt = $db->prepare("INSERT INTO application SET name = ?");
-  $stmt -> execute(['fio']);
+  $stmt -> execute($_POST['fio']);
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
