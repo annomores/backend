@@ -5,7 +5,8 @@
 		<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
-	
+	<body>
+		<div class="form-class">
 <form action="" method="POST">
   <fieldset>
   <div class="form-row">
@@ -60,4 +61,5 @@
                 </p>
   </fieldset>
 </form>
+	</div>
 </html>
