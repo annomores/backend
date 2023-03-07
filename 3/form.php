@@ -10,7 +10,7 @@
 <form action="" method="POST">
   <fieldset>
   <div class="form-row">
-  <label for="name">Ваше имя</label><input type="name" id="name" required>
+	  <label for="name">Ваше имя</label><input type="name" id="name" required>
   <div class="form-row">
 <label for="email">Ваш Email</label><input type="email" id="email" required>
 </div>
@@ -23,42 +23,42 @@
     }
     ?>
   </select>
-    <p>Пол<br><br>
+    <label for="gender">Ваш пол</label>
                     <label><input type="radio" name="radio-gender" value="man">Мужской</label>
                     <label><input type="radio" name="radio-gender" value="woman">Женский</label>
-                </p>
-   <p>Количество конечностей<br><br>
+              
+  <label for="numlimbs">Количество конечностей</label>
                     <label><input type="radio" name="radio-numlimbs" value="1">1</label>
                     <label><input checked type="radio" name="radio-numlimbs" value="2">2</label>
                     <label><input type="radio" name="radio-numlimbs" value="4">4</label>
                     <label> <input type="radio" name="radio-numlimbs" value="8">8</label>
                     <label> <input type="radio" name="radio-numlimbs" value="16">16</label>
-                </p>
-  <p>
-                    <label>Сверхспособности<br><br>
+               
+ 
+                   <label for="super-powers">Сверхспособности</label>
                         <select multiple name="super-powers">
                             <option value="pizza">Летать</option>
                             <option selected value="sleep">Телепатия</option>
                             <option value="concentration">Безнаказанный пропуск пар</option>
                         </select>
-                    </label>
-                </p>
-  <div>
-                    <p>
-                        <label>Биография<br><br>
+                   
+                
+ 
+                    
+                       <label for="user-biography">Расскажите о себе</label>
                             <textarea placeholder="Расскажите о себе" name="user-biography" id="biography"></textarea>
-                        </label>
-                    </p>
-                </div>
-                <p>
+                        
+                   
+               
+               
                     <label>
                             <input type="checkbox" name="user-agree" value="true">Ознакомлен(а)
                     </label>
-                </p>
+                
 		    
-                <p>
+                <label>
                     <input type="submit" value="Отправить">
-                </p>
+	  </label>
   </fieldset>
 </form>
 	</div>
