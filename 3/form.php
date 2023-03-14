@@ -37,7 +37,7 @@
  
                    <label for="super-powers">Сверхспособности</label>
                         <select multiple name="super-powers">
-                            <option value="pizza">Летать</option>
+                            <option value="fly">Летать</option>
                             <option selected value="sleep">Телепатия</option>
                             <option value="concentration">Безнаказанный пропуск пар</option>
                         </select>
