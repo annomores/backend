@@ -14,7 +14,8 @@
   <input  type="radio" select name="limbs" id="limb2" value="3"> 3
   <input  type="radio" select name="limbs" id="limb3" value="5"> 5
   <input  type="radio" select name="limbs" id="limb4" value="8"> 8
+  <select name="biography">
   <input type="submit" value="ok" />
   
-  <select name="biography">
+  
 </form>
