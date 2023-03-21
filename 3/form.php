@@ -16,4 +16,5 @@
   <input  type="radio" select name="limbs" id="limb4" value="8"> 8
   <input type="submit" value="ok" />
   
+  <select name="biography">
 </form>
