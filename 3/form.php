@@ -10,5 +10,10 @@
   
   <input type="radio"  select name="gender" id="sex1" value="1"> Female
   <input type="radio"  select name="gender" id="sex1" value="0"> Male
+  <input  type="radio" select name="limbs" id="limb1" value="2"> 2
+  <input  type="radio" select name="limbs" id="limb2" value="3"> 3
+  <input  type="radio" select name="limbs" id="limb3" value="5"> 5
+  <input  type="radio" select name="limbs" id="limb4" value="8"> 8
   <input type="submit" value="ok" />
+  
 </form>
