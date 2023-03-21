@@ -8,7 +8,7 @@
     ?>
   </select>
   
-  <input class="form-check-input" select name="gender" id="sex1" value="1"> Female
-  <input class="form-check-input" select name="gender" id="sex1" value="0"> Male
+  <input type="radio"  select name="gender" id="sex1" value="1"> Female
+  <input type="radio"  select name="gender" id="sex1" value="0"> Male
   <input type="submit" value="ok" />
 </form>
