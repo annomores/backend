@@ -39,10 +39,7 @@ if(empty($_POST['superpowers'])){
   print('Выберите хотя бы 1 суперспособность.<br/>');
   $errors = TRUE;
 }
-if(empty($_POST['accept'])){
-  print('Необходимо подтвердить ознакомление с контрактом.<br/>');
-  $errors = TRUE;
-}
+
 
 if ($errors) {
   exit();
