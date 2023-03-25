@@ -78,9 +78,9 @@
    <div class="col-12">
             <label for="superpowers" class="form-label">Сверхспособности</label>
             <select name="superpowers[]" id="superpowers" multiple="multiple" class="form-select">
-               <option value="1" <?php if(in_array(1,$ar)) echo 'selected' ?>>летать</option>
-              <option value="2" <?php if(in_array(2,$ar)) echo 'selected' ?>>безнаказанный пропуск пар</option>
-              <option value="3" <?php if(in_array(3,$ar)) echo 'selected' ?>>чтение мыслей</option>
+               <option value="1">летать</option>
+              <option value="2">безнаказанный пропуск пар</option>
+              <option value="3">чтение мыслей</option>
             </select>
           </div>
     <div class="col-12">
