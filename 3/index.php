@@ -63,9 +63,9 @@ try{
   $stmt = $db->prepare("INSERT INTO application VALUES (null,:name,:email,:yob,:sex,:num_of_limbs,:biography)");
   $stmt -> execute(['name'=>$_POST['name'], 'email'=>$_POST['email'],'yob'=>$_POST['yob'],'sex'=>$_POST['sex'],'num_of_limbs'=>$_POST['num_of_limbs'],'biography'=>$_POST['biography']]);
   $ap_id = $db->lastInsertId();
-  foreach ($_POST['superpower'] as $application_id) {
-    $stmt = $db->prepare("INSERT INTO application_power VALUES (null,:application_id,:superpower_id)");
-    $stmt -> execute(['application_id'=>$application_id, 'superpower_id'=>$superpower_id]);
+  foreach ($_POST['superpowers'] as $sup_id) {
+    $stmt = $db->prepare("INSERT INTO application_superpower VALUES (null,:ap_id,:sup_id)");
+    $stmt -> execute(['ap_id'=>$ap_id, 'sup_id'=>$sup_id]);
   }
 } catch(PDOException $e){
     print('Error : ' . $e->getMessage());
