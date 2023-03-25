@@ -39,7 +39,7 @@ if(empty($_POST['superpowers'])){
   print('Выберите хотя бы 1 суперспособность.<br/>');
   $errors = TRUE;
 }
-if(empty($_POST['policyCheckBox'])){
+if(empty($_POST['accept'])){
   print('Необходимо подтвердить ознакомление с контрактом.<br/>');
   $errors = TRUE;
 }
@@ -57,7 +57,7 @@ $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, [PDO::ATTR_PER
 // Подготовленный запрос. Не именованные метки.
 try {
   $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, yob= ?, sex =?, num_of_limbs =?, biography=?, accept=?");
-  $stmt -> execute([$_POST['fio'],$_POST['email'],$_POST['yob'], $_POST['sex'],$_POST['num_of_limbs'],$_POST['biography'],$_POST['accept']]);
+  $stmt -> execute([$_POST['name'],$_POST['email'],$_POST['yob'], $_POST['sex'],$_POST['num_of_limbs'],$_POST['biography'],$_POST['accept']]);
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
