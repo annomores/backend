@@ -49,16 +49,22 @@ if ($errors) {
 
 $user = 'u52822';
 $pass = '8321484';
-$db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, [PDO::ATTR_PERSISTENT => true]);
-
-// Подготовленный запрос. Не именованные метки.
-try {
-  $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, yob= ?, sex =?, num_of_limbs =?, biography=?, accept=?");
-  $stmt -> execute([$_POST['name'],$_POST['email'],$_POST['yob'], $_POST['sex'],$_POST['num_of_limbs'],$_POST['biography'],$_POST['accept']]);
+$db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+} catch(PDOException $e){
+  die($e->getMessage());
 }
-catch(PDOException $e){
-  print('Error : ' . $e->getMessage());
-  exit();
+// Подготовленный запрос. Не именованные метки.
+try{
+  $stmt = $db->prepare("INSERT INTO application VALUES (null,:name,:email,:yob,:sex,:num_of_limbs,:biography)");
+  $stmt -> execute(['name'=>$_POST['name'], 'email'=>$_POST['email'],'yob'=>$_POST['yob'],'sex'=>$_POST['sex'],'num_of_limbs'=>$_POST['num_of_limbs'],'biography'=>$_POST['biography']]);
+  $ap_id = $db->lastInsertId();
+  foreach ($_POST['superpowers'] as $sup_id) {
+    $stmt = $db->prepare("INSERT INTO application_superpower VALUES (null,:ap_id,:sup_id)");
+    $stmt -> execute(['ap_id'=>$ap_id, 'sup_id'=>$sup_id]);
+  }
+} catch(PDOException $e){
+    print('Error : ' . $e->getMessage());
+    exit();
 }
 
 //  stmt - это "дескриптор состояния".
