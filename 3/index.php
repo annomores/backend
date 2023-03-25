@@ -61,7 +61,6 @@ try{
   foreach ($_POST['superpowers'] as $sup_id) {
     $stmt = $db->prepare("INSERT INTO application_superpower VALUES (null,:ap_id,:sup_id)");
     $stmt -> execute(['ap_id'=>$ap_id, 'sup_id'=>$sup_id]);
-  }
 } catch(PDOException $e){
     print('Error : ' . $e->getMessage());
     exit();
