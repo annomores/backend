@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // В суперглобальном массиве $_GET PHP хранит все параметры, переданные в текущем запросе через URL.
   if (!empty($_GET['save'])) {
     // Если есть параметр save, то выводим сообщение пользователю.
-    print('Спасибо, результаты сохранены.');
+   // print('Спасибо, результаты сохранены.');
   }
   // Включаем содержимое файла form.php.
   include('form.php');
@@ -37,6 +37,10 @@ if (empty($_POST['yob']) || !is_numeric($_POST['yob']) || !preg_match('/^\d+$/',
 }
 if(empty($_POST['superpowers'])){
   print('Выберите хотя бы 1 суперспособность.<br/>');
+  $errors = TRUE;
+}
+if(empty($_POST['policyCheckBox'])){
+  print('Необходимо подтвердить ознакомление с контрактом.<br/>');
   $errors = TRUE;
 }
 
