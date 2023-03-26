@@ -88,9 +88,5 @@
            </div>
         </div>
 </div>
-<footer>
-  <h3 class="text-center m-3">
-   Фурса В.Е. 2023
-  </h3>
-</footer>
+
 </body>
