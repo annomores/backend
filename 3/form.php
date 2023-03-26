@@ -1,111 +1,96 @@
-<link rel="stylesheet" href="/3/style.css">
-<form action="" method="POST">
-  <div class="col-md-6">
-            <label for="formName" class="form-label">Имя</label>
-            <input name="name" id="formName" class="form-control" placeholder="Введите имя" value="<?php  
-              if(isset($_COOKIE['name']))
-              print $_COOKIE['name'];
-              ?>">
-          </div>
-  <div class="col-md-6">
-            <label for="formEmail" class="form-label">Email</label>
-            <input name="email" id="formEmail" class="form-control" type="email" placeholder="Введите почту" value="<?php  
-              if(isset($_COOKIE['email']))
-              print $_COOKIE['email'];
-              ?>">
-          </div>
-   <div class="col-md-6">
-   <label for="year" class="form-label">Год рождения</label>
-            <select name="yob" id="year" class="form-select">
-            <?php 
-    for ($i = 1922; $i <= 2022; $i++) {
-      printf('<option value="%d">%d год</option>', $i, $i);
-    }
-    ?>
-    </select>
-          </div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+          
+</head>
   
-   <div class="col-md-6 d-flex justify-content-center">
-     <div class="col-6 m-auto row">
-              <label class="form-label">Пол</label>
-              <div class="col-6 ">
-                <input class="form-check-input" type="radio" name="sex" value="1"
-                       id="M">
-                <label class="form-check-label" for="M">М</label>
-              </div>
-              <div class="col-6">
-                <input class="form-check-input" type="radio" name="sex" value="0"
-                       id="ZH">
-                <label class="form-check-label" for="ZH">Ж</label>
-              </div>
-            </div>
-     
-      <div class="col-6 m-auto row">
-              <label class="form-label">Количество конечностей</label>
-              <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="0"
-                       id="0">
-                <label class="form-check-label" for="0">0</label>
-              </div>
-         <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="1"
-                       id="1">
-                <label class="form-check-label" for="1">1</label>
-              </div>
-              <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="2"
-                       id="2">
-                <label class="form-check-label" for="2">2</label>
-              </div>
-        <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="3"
-                       id="3">
-                <label class="form-check-label" for="3">3</label>
-              </div>
-              <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="4" 
-                id="4">
-                <label class="form-check-label" for="4">4</label>
-              </div>
-              <div class="col-6 col-md-2">
-                <input class="form-check-input" type="radio" name="num_of_limbs" value="5" 
-                       id="5">
-                <label class="form-check-label" for="5">5</label>
-              </div>
-            </div>
+<body>
+<div class="container">
+  <h1 class="text-center m-5">Web Backend Lab 3</h1>
 
-          </div>
-   <div class="col-12">
-            <label for="superpowers" class="form-label">Сверхспособности</label>
-            <select name="superpowers[]" id="superpowers" multiple="multiple" class="form-select">
-               <option value="1">летать</option>
-              <option value="2">безнаказанный пропуск пар</option>
-              <option value="3">чтение мыслей</option>
-            </select>
-          </div>
-    <div class="col-12">
-            <label for="biography" class="form-label">Биография</label>
-            <textarea id="biography" class="form-control" name="biography" placeholder="Введите биографию">
-              </textarea>
-          </div>
-   <div class="col-12 d-flex">
-            <div class="form-check m-auto">
-              <label class="form-check-label" for="policyCheckBox">Ознакомлен(а)</label>
-              <input class="form-check-input" type="checkbox" id="policyCheckBox"
-                     name="policyCheckBox">
-            </div>
-          </div>
-  <div class="col-12 d-flex">          
-            <input type="submit" id="submitBtn" class="btn btn-success m-auto" value="Отправить">
-          </div>
-        </form>
-<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body d-flex p-0">
-        <h1>Спасибо, результаты сохранены.</h1>
-      </div>
-    </div>
-  </div>
+  <div class="container-sm theme-list py-3 pl-0 mb-3">
+    <div class="d-flex flex-column align-items-center">
+
+      <form class="d-block p-2" action="index.php" method="POST">
+
+          <div class="form-floating mb-3">
+                  <input class="form-control" name="fio" type="text" placeholder="FirstName LastName" id="fio">
+                  <label for="fio" class="form-label">Ваше имя</label>
+                </div>
+
+          <div class="form-floating mb-3">
+                  <input class="form-control" name="email" type="email" placeholder="name@example.com" id="email">
+                  <label for="email" class="form-label">Ваш email</label>
+                </div>
+
+          <div class="mb-3">
+                  <label for="year" class="form-label">Дата рождения</label>
+                  <select class="form-select" name="year" id="year">
+                    <?php 
+                       for($i = 1900; $i < 2020; $i++){
+                        printf('<option value="%d">%d год</option>', $i, $i);
+                        }
+                     ?>
+                  </select>
+                </div>
+
+           <div class="mb-3">
+                  <label class="form-label">Пол</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="sex" id="sex1" value="0" checked> Male
+                  <input class="form-check-input" type="radio" name="sex" id="sex2" value="1"> Female
+                </div>
+
+           <div class="mb-3">
+                  <label class="form-label">Число конечностей</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb1" value="2" checked>
+                    <label class="form-check-label">2</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb2" value="4">
+                    <label class="form-check-label">4</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb3" value="6">
+                    <label class="form-check-label">6</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb4" value="8">
+                    <label class="form-check-label">8</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb5" value="10">
+                    <label class="form-check-label">10</label>
+                </div>
+
+          <div class="mb-3">
+                  <label class="form-label">Сверхсособности</label>
+                  <select class="form-select" id="example-getting-started" name="abilities[]" multiple="multiple">
+                    <option value="1">Бессмертие</option>
+                    <option value="2">Прохождение сковзь стены</option>
+                    <option value="3">Левитация</option>
+                    <option value="4">Невидимость</option>
+                  </select>
+                </div>
+
+           <div class="mb-3 form-floating">
+                  <textarea class="form-control" name="bio" placeholder="Биография" style="height: 100px; width: 420px;"></textarea>
+                  <label class="form-label">Биография</label>
+                </div>
+
+            <div class="mb-3 form-check">
+                  <input class="form-check-input" type="checkbox" name="accept" value="1">
+                  <label class="form-check-label">Принять пользовательские соглашения</label>
+                </div>
+
+           <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-light" type="submit" value="send">Отправить</button>
+                </div>
+        
+              </form>
+      
+           </div>
+        </div>
 </div>
- 
+<footer>
+  <h3 class="text-center m-3">
+   Фурса В.Е. 2023
+  </h3>
+</footer>
+</body>
