@@ -51,7 +51,7 @@ foreach ($ability_data as $ability) {
 
 
 //bio
-if (empty($_POST['bio'])) {
+if (empty($_POST['biography'])) {
   print('Заполните поле.<br/>');
   $errors = TRUE;
 }
@@ -68,15 +68,15 @@ if ($errors) {
 }
 
   
-$user = 'u52827'; 
-$pass = '4296369'; 
-$db = new PDO('mysql:host=localhost;dbname=u52827', $user, $pass,
+$user = 'u52822'; 
+$pass = '8321484'; 
+$db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
 // Подготовленный запрос. Не именованные метки.
 try {
   $stmt = $db->prepare("INSERT INTO application SET fio = ?,email=?,year=?,sex=?,limbs=?,biography=?");
-  $stmt->execute([$_POST['fio'],$_POST['email'],$_POST['year'], $_POST['sex'],$_POST['limb'],$_POST['bio']]);
+  $stmt->execute([$_POST['fio'],$_POST['email'],$_POST['year'], $_POST['sex'],$_POST['limbs'],$_POST['biography']]);
   
   $app_id = $db->lastInsertId();
   $stmt = $db->prepare("INSERT INTO app_ability SET app_id=?, abil_id = ?");
