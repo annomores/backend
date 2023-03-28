@@ -9,6 +9,14 @@
 </head>
   
 <body>
+  <style>
+    .form-container .form-horizontal .btn:hover,
+.form-container .form-horizontal .btn:focus{
+ color: #fff;
+ letter-spacing: 3px;
+ box-shadow: none;
+ outline: none;
+}
 <div class="container">
 
 
@@ -92,4 +100,5 @@
 <footer>
  
 </footer>
+  </style>
 </body>
