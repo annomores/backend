@@ -10,7 +10,7 @@
   
 <body>
 <div class="container">
-  <h1 class="text-center m-5">Web Backend Lab 3</h1>
+  
 
   <div class="container-sm theme-list py-3 pl-0 mb-3">
     <div class="d-flex flex-column align-items-center">
