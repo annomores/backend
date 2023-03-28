@@ -47,12 +47,13 @@
 
            <div class="mb-3">
                   <label class="form-label">Число конечностей</label>
+              <label class="form-check-label">2</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb1" value="2" checked>
-                    <label class="form-check-label">2</label>
-                  <input class="form-check-input" type="radio" name="limb" id="limb2" value="4">
                     <label class="form-check-label">4</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb2" value="4">
+                     <label class="form-check-label">6</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb3" value="6">
-                    <label class="form-check-label">6</label>
+                    <label class="form-check-label">8</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb4" value="8">
                     <label class="form-check-label">8</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb5" value="10">
@@ -62,10 +63,10 @@
           <div class="mb-3">
                   <label class="form-label">Сверхсособности</label>
                   <select class="form-select" id="example-getting-started" name="abilities[]" multiple="multiple">
-                    <option value="1">Бессмертие</option>
-                    <option value="2">Прохождение сковзь стены</option>
+                    <option value="1">Безнаказанный пропуск пар</option>
+                    <option value="2">Чтение мыслей</option>
                     <option value="3">Левитация</option>
-                    <option value="4">Невидимость</option>
+                    <option value="4">Невидимка</option>
                   </select>
                 </div>
 
