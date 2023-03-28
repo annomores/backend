@@ -11,13 +11,7 @@
 <body>
 <div class="container">
   <style>
-.form-container{
- background: #ecf0f3;
- font-family: 'Nunito', sans-serif;
- padding: 40px;
- border-radius: 20px;
- box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px grey;
-}
+
 
   <div class="container-sm theme-list py-3 pl-0 mb-3">
     <div class="d-flex flex-column align-items-center">
