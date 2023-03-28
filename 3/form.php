@@ -17,7 +17,7 @@
 
   <div class="container-sm theme-list py-3 pl-0 mb-3">
     <div class="d-flex flex-column align-items-center">
-<div class="row bg-grey shadow-sm">
+<div class="row bg-blue shadow-sm">
       <form class="d-block p-2" action="index.php" method="POST">
 
           <div class="form-floating mb-3">
