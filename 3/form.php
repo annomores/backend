@@ -5,12 +5,11 @@
   <title>Lab 3</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
         rel="stylesheet"
-        
+          
 </head>
   
 <body>
 <div class="container">
-  <style>
 
 
   <div class="container-sm theme-list py-3 pl-0 mb-3">
@@ -47,27 +46,27 @@
                 </div>
 
            <div class="mb-3">
-                  <label class="form-label">Число конечностей</label>
-              <label class="form-check-label">2</label>
+                  <label class="form-label">Число конечностей:  </label>
+             <label class="form-check-label">2</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb1" value="2" checked>
-                    <label class="form-check-label">4</label>
+                   <label class="form-check-label">4</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb2" value="4">
-                     <label class="form-check-label">6</label>
+                    <label class="form-check-label">6</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb3" value="6">
-                    <label class="form-check-label">8</label>
+                   <label class="form-check-label">8</label>
                   <input class="form-check-input" type="radio" name="limb" id="limb4" value="8">
-                    <label class="form-check-label">8</label>
-                  <input class="form-check-input" type="radio" name="limb" id="limb5" value="10">
                     <label class="form-check-label">10</label>
+                  <input class="form-check-input" type="radio" name="limb" id="limb5" value="10">
+                    
                 </div>
 
           <div class="mb-3">
                   <label class="form-label">Сверхсособности</label>
                   <select class="form-select" id="example-getting-started" name="abilities[]" multiple="multiple">
                     <option value="1">Безнаказанный пропуск пар</option>
-                    <option value="2">Чтение мыслей</option>
+                    <option value="2">Невидимка</option>
                     <option value="3">Левитация</option>
-                    <option value="4">Невидимка</option>
+                    <option value="4">Чтение мыслей</option>
                   </select>
                 </div>
 
@@ -90,5 +89,7 @@
            </div>
         </div>
 </div>
-
+<footer>
+ 
+</footer>
 </body>
