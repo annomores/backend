@@ -3,23 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Lab 3</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
         rel="stylesheet"
           
 </head>
-    <style>
-.form-container .d-block p-2 .btn:hover,
-.form-container .d-block p-2 .btn:focus{
- color: #fff;
- letter-spacing: 3px;
- box-shadow: none;
- outline: none;
-}
-
-  </style>
+   
 <body>
 
 <div class="container">
@@ -27,7 +17,7 @@
 
   <div class="container-sm theme-list py-3 pl-0 mb-3">
     <div class="d-flex flex-column align-items-center">
-
+<div class="row bg-grey shadow-sm">
       <form class="d-block p-2" action="index.php" method="POST">
 
           <div class="form-floating mb-3">
@@ -101,6 +91,7 @@
       
            </div>
         </div>
+  </div>
 </div>
 <footer>
  
