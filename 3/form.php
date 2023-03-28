@@ -11,8 +11,8 @@
           
 </head>
     <style>
-.form-container .form-horizontal .btn:hover,
-.form-container .form-horizontal .btn:focus{
+.form-container .d-block p-2 .btn:hover,
+.form-container .d-block p-2 .btn:focus{
  color: #fff;
  letter-spacing: 3px;
  box-shadow: none;
