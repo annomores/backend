@@ -7,9 +7,7 @@
         rel="stylesheet"
           
 </head>
-  
-<body>
-  <style>
+    <style>
     .form-container .form-horizontal .btn:hover,
 .form-container .form-horizontal .btn:focus{
  color: #fff;
@@ -17,6 +15,9 @@
  box-shadow: none;
  outline: none;
 }
+  </style>
+<body>
+
 <div class="container">
 
 
@@ -100,5 +101,5 @@
 <footer>
  
 </footer>
-  </style>
+ 
 </body>
