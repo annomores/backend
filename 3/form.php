@@ -9,11 +9,11 @@
         rel="stylesheet"
       <style>
 
-        html, body {
+        .html, body {
             height: 100%;
         }
 
-        body {
+        .body {
             background-color: purple-100;
         }
 
