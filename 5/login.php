@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 else {
     $user = 'u52822';
     $pass = '8321484';
-    $db = new PDO('mysql:host=localhost;dbname=u52827', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     try {
         $stmt = $db->prepare("SELECT * FROM login WHERE login=:login");
         $stmt->execute(array("login"=>$_POST['login']));
