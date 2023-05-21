@@ -4,9 +4,9 @@
 header('Content-Type: text/html; charset=UTF-8');
 
 function getUserId($login){
-    $user = 'u47554';
-    $pass = '6645271';
-    $db = new PDO('mysql:host=localhost;dbname=u47554', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u52822';
+    $pass = '8321484';
+    $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     try {
         $get_id = $db->prepare("SELECT user_id FROM login WHERE login=:login");
         $db->beginTransaction();
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     if ($errors['sex_empty']) {
         setcookie('sex_empty', '', 100000);
-        $messages[] = '<div class="error">Выберите пол.</div>';
+        $messages[] = '<div class="error">Укажите пол.</div>';
     }
     if ($errors['limb_empty']) {
         setcookie('limb_empty', '', 100000);
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     if ($errors['abilities_empty']) {
         setcookie('abilities_empty', '', 100000);
-        $messages[] = '<div class="error">Не выбраны способности.</div>';
+        $messages[] = '<div class="error">Выберите способности.</div>';
     }
     if ($errors['abilities_error']) {
         setcookie('abilities_error', '', 100000);
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     if ($errors['accept_error']) {
         setcookie('accept_error', '', 100000);
-        $messages[] = '<div class="error">Вы не согласились.</div>';
+        $messages[] = '<div class="error">Вы не приняли соглашение.</div>';
     }
 
     $values = array();
@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 
     if ($check && !empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])) {
-        $db = new PDO('mysql:host=localhost;dbname=u52827', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         $id = getUserId($_SESSION['login']);
         try {
             $stmt = $db->prepare("SELECT * FROM users WHERE id=:id");
@@ -247,7 +247,7 @@ else{
     if (!isset($_SESSION)) { session_start(); }
     
      if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])) {
-        $db = new PDO('mysql:host=localhost;dbname=u47554', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+        $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
         try {
             $id = getUserId($_SESSION['login']);
             $second_stmt = $db->prepare("UPDATE users SET name=:name, year=:year, sex=:sex, email=:email, bio=:bio, limb=:limb WHERE id =:id");
@@ -268,7 +268,7 @@ else{
         setcookie('pass', $pwd);
 
         try {
-            $db = new PDO('mysql:host=localhost;dbname=u52827', $user, $pass);
+            $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass);
             
              $first_stmt = $db->prepare("INSERT INTO application SET fio = ?,email=?,year=?,sex=?,limbs=?,biography=?");
              $first_stmt->execute([$_POST['fio'],$_POST['email'],$_POST['year'], $_POST['sex'],$_POST['limb'],$_POST['bio']]);
