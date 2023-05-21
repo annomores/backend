@@ -48,9 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         </form>
     </div>
     <footer>
-        <h2 class="text-center m-3">
-            Фурса 23
-        </h2>
+       
     </footer>
     </body>
     </html>
