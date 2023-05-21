@@ -183,8 +183,6 @@ if (!empty($messages)) {
 
 </div>
 <footer>
-    <h2 class="text-center m-3">
-         Фурса В.Е. 2023
-    </h2>
+  
 </footer>
 </body>
