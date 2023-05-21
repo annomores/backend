@@ -155,8 +155,8 @@ else{
         setcookie('accept_error', '', 100000);
     }
 
-    $user = 'u52827';
-    $pass = '4296369';
+    $user = 'u52822';
+    $pass = '8321484';
     $db = new PDO('mysql:host=localhost;dbname=u52827', $user, $pass,
         [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
