@@ -88,9 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['3'] = empty($_COOKIE['3_value']) ? '' : $_COOKIE['3_value'];
 
   if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])) {
-    $user = 'u52805';
-    $pass = '5816061';
-    $db = new PDO('mysql:host=localhost;dbname=u52805', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u52822';
+    $pass = '8321484';
+    $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     try {
       $get = $db->prepare("SELECT * FROM person WHERE id=?");
       $get->bindParam(1, $_SESSION['uid']);
@@ -219,7 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $user = 'u52805';
     $pass = '5816061';
     $db = new PDO(
-      'mysql:host=localhost;dbname=u52805',
+      'mysql:host=localhost;dbname=u52822',
       $user,
       $pass,
       [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
