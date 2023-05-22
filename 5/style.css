@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-color: #fcf7f7;
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    text-align:center;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    
+}
+button{
+    background-color: #fcf7f7;
+}
+input,textarea,select{
+    background-color: #fcf7f7;
+    color: black;
+}
