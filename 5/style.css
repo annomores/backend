@@ -12,8 +12,8 @@ form{
     gap:10px;
     
 }
-button{
-    background-color: #fcf7f7;
+.button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 input,textarea,select{
     background-color: #fcf7f7;
