@@ -6,6 +6,11 @@ body{
     width:200px;
     text-align:left;
 }
+.card {
+  border-width: 5px 5px 5px 5px;
+  border-style: solid dashed solid dashed;
+  border-color: #9c27b0 #f3e5f5 #9c27b0 #f3e5f5;
+}
 form{
     display:flex;
     flex-direction: column;
