@@ -16,7 +16,11 @@ form{
 .button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-input,textarea,select{
+input,select{
+    background-color: #f8f8f8;
+    color: black;
+}
+textarea{
     width: 100%;
     height: 150px;
     padding: 12px 20px;
