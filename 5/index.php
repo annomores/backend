@@ -216,8 +216,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       setcookie('checked_error', '', 100000);
     }
 
-    $user = 'u52805';
-    $pass = '5816061';
+    $user = 'u52822';
+    $pass = '8321484';
     $db = new PDO(
       'mysql:host=localhost;dbname=u52822',
       $user,
