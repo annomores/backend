@@ -8,7 +8,7 @@
     .error {
       margin: 0 auto 2px auto;
       width: 200px;
-      border: 2px solid purple;
+      border: 2px solid ;
     }
   </style>
 </head>
@@ -83,19 +83,19 @@
       ?>
       <br>
       <?php
-      printf('1');
+      printf('2');
       ?>
       <input type="radio" value="1" name="count_limb" <?php if (!empty($values['count_limb'] == '1')) {
         print 'checked';
       } ?>>
       <?php
-      printf('2');
+      printf('4');
       ?>
       <input type="radio" value="2" name="count_limb" <?php if (!empty($values['count_limb'] == '2')) {
         print 'checked';
       } ?>>
       <?php
-      printf('3');
+      printf('6');
       ?>
       <input type="radio" value="3" name="count_limb" <?php if (!empty($values['count_limb'] == '3')) {
         print 'checked';
@@ -111,10 +111,10 @@
       } ?>>
         <option value="1" <?php if (!empty($values['1'] == 1)) {
           print 'selected';
-        } ?>>Бессмертие</option>
+        } ?>>Безнаказанный пропуск пар</option>
         <option value="2" <?php if (!empty($values['2'] == 1)) {
           print 'selected';
-        } ?>>Проходить сквозь стены</option>
+        } ?>>Чтение мыслей</option>
         <option value="3" <?php if (!empty($values['3'] == 1)) {
           print 'selected';
         } ?>>Левитация</option>
@@ -133,7 +133,7 @@
       print 'class="error"';
     } ?>>
       <?php
-      printf('С контрактом ознакомлен(-а)');
+      printf('Принять соглашение');
       ?>
       <input type="checkbox" name="checked" <?php if (!empty($values['checked'] == 'on')) {
         print 'checked';
@@ -147,7 +147,7 @@
   if (empty($_SESSION['login'])) {
     echo '
    <div class="login">
-    <p>Имеется аккаунт? <a href="login.php" style="color:black;">Входите!</a></p>
+    <p>Уже есть аккаунт?<a href="login.php" style="color:black;">Войти</a></p>
    </div>';
   } else {
     echo '
