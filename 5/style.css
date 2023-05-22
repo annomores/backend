@@ -6,10 +6,7 @@ body{
     width:200px;
     text-align:left;
 }
-style {
-  display: block;
-  border: 1px dashed black;
-}
+
 form{
     display:flex;
     flex-direction: column;
