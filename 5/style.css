@@ -6,17 +6,10 @@ body{
     width:200px;
     text-align:left;
 }
-<style>
-  td {
-    border: thick solid #4caf50;
-  }
-  .hidden {
-    border-style: hidden;
-  }
-  .none {
-    border-style: none;
-  }
-</style>
+style {
+  display: block;
+  border: 1px dashed black;
+}
 form{
     display:flex;
     flex-direction: column;
