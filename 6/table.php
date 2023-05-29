@@ -67,9 +67,9 @@
       ?>
     </table>
     <?php
-    printf('Пользователи с 1 способностью: %d <br>',$super_power_count[0]);
-    printf('Пользователи со 2 способностью: %d <br>',$super_power_count[1]);
-    printf('Пользователи с 3 способностью: %d <br>',$super_power_count[2]);
+    printf('Пользователи со способность "Безнаказанный пропуск пар": %d <br>',$super_power_count[0]);
+    printf('Пользователи со способностью "Чтение мыслей": %d <br>',$super_power_count[1]);
+    printf('Пользователи со способностью "Левитация": %d <br>',$super_power_count[2]);
     ?>
   </div>
 </body>
