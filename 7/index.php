@@ -316,6 +316,6 @@ try {
     setcookie('del', '1');
     setcookie('del_user', $id);
     header('Location: admin.php');
-  }
+  
 
 }
