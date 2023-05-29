@@ -312,20 +312,7 @@ try {
       setcookie('save', '1');
     }
     header('Location: index.php?edit_id=' . $id);
-   else {
-    $id = $_POST['dd'];
-    $user = 'u52822';
-    $pass = '8321484';
-    $db = new PDO('mysql:host=localhost;dbname=u52822', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
-    try {
-      $del = $db->prepare("DELETE FROM super_power WHERE person_id=?");
-      $del->execute(array($id));
-      $stmt = $db->prepare("DELETE FROM person WHERE id=?");
-      $stmt->execute(array($id));
-    } catch (PDOException $e) {
-      print('Error : ' . $e->getMessage());
-      exit();
-    }
+
     setcookie('del', '1');
     setcookie('del_user', $id);
     header('Location: admin.php');
