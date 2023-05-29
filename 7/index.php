@@ -312,7 +312,7 @@ try {
       setcookie('save', '1');
     }
     header('Location: index.php?edit_id=' . $id);
-  } else {
+   else {
     $id = $_POST['dd'];
     $user = 'u52822';
     $pass = '8321484';
