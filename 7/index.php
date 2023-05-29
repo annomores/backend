@@ -147,16 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   include('form.php');
 } 
 else if (session_start() && isset($_SESSION['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token']) {
-else {
-  if (!empty($_POST['save'])) {
-    $id = $_POST['dd'];
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $year = $_POST['year'];
-    $gender = $_POST['gender'];
-    $count_limb = $_POST['count_limb'];
-    $super_power = $_POST['super_power'];
-    $biography = $_POST['biography'];
+
 
     //Регулярные выражения
     $bioreg = "/^\s*\w+[\w\s\.,-]*$/";
